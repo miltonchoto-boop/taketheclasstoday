@@ -2,7 +2,7 @@
 
 **Brand:** VIP Safety Group / Take The Class Today  
 **Status:** On-box HTML/CSS/JS prototype + GitHub Pages preview — **do not flip DNS / Carrd** without Milton  
-**Date:** Wed Sep 30, 2026 (ET) · VIP watermark pass ~6:55 AM ET
+**Date:** Wed Sep 30, 2026 (ET) · visual cleanup pass
 
 ## Preview
 
@@ -28,7 +28,7 @@ Screenshots:
 | `index.html` | Semantic scroll chapters |
 | `styles.css` | Night-blue + coral · Fraunces + Plus Jakarta Sans · sticky chapters |
 | `app.js` | Reveals, nav highlight, how-step scrub, progress bar, mobile sticky CTA |
-| `assets/vip-mark.svg` | Soft V / chevron brand mark for watermark + header |
+| `assets/vip-mark.svg` | VIP / chevron brand mark used in the normal header badge |
 | `README.md` | This file |
 
 ### Scroll chapters
@@ -45,8 +45,7 @@ Screenshots:
 - Palette: night `#070F1C` / `#0B1F3A` → blue wash `#4F86F0` · coral `#E6496F`  
 - Type: **Fraunces** (display) + **Plus Jakarta Sans** (UI)  
 - Motion: restrained fade/slide; scroll progress; how-step highlight; `prefers-reduced-motion`  
-- **VIP Safety Group watermark** — large faded Archivo Black text + soft V mark behind hero / start / Danny / fine (Carrd-era style; soft side-mask so mobile doesn’t hard-clip)  
-- Header VIP badge uses same mark weight + faint V behind “VIP”  
+- Header VIP badge retains the normal VIP mark and “VIP Safety Group” copy
 - Forms look real but are not wired; TicketSchool + Danny CTAs are live links  
 - No invented reviews, prices, or licenses  
 
