@@ -1,5 +1,5 @@
-/* Take The Class Today — cinematic prototype JS
-   IntersectionObserver chapter reveals + sticky nav + mobile menu */
+/* Take The Class Today — cinematic prototype JS (polish pass)
+   Reveals, chapter nav, sticky CTA, progress, how-step highlight */
 
 (() => {
   const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
@@ -18,7 +18,7 @@
           }
         });
       },
-      { rootMargin: "0px 0px -8% 0px", threshold: 0.12 }
+      { rootMargin: "0px 0px -10% 0px", threshold: 0.1 }
     );
     reveals.forEach((el) => io.observe(el));
   } else {
@@ -42,9 +42,46 @@
           .sort((a, b) => b.intersectionRatio - a.intersectionRatio);
         if (visible[0]) setActive(visible[0].target.dataset.chapter);
       },
-      { rootMargin: "-30% 0px -45% 0px", threshold: [0.1, 0.35, 0.6] }
+      { rootMargin: "-28% 0px -48% 0px", threshold: [0.1, 0.35, 0.6] }
     );
     chapters.forEach((el) => chapterIo.observe(el));
+  }
+
+  /* —— How-step sticky highlight + progress markers —— */
+  const howSteps = document.querySelectorAll(".how-step");
+  const howMarkers = document.querySelectorAll(".how-progress [data-marker]");
+  if ("IntersectionObserver" in window && howSteps.length) {
+    const stepIo = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+          const step = entry.target.dataset.step;
+          howSteps.forEach((el) => {
+            el.classList.toggle("is-active", el.dataset.step === step);
+          });
+          howMarkers.forEach((m) => {
+            m.classList.toggle("is-on", Number(m.dataset.marker) <= Number(step));
+          });
+        });
+      },
+      { rootMargin: "-35% 0px -45% 0px", threshold: 0.4 }
+    );
+    howSteps.forEach((el) => stepIo.observe(el));
+    if (howSteps[0]) howSteps[0].classList.add("is-active");
+  }
+
+  /* —— Scroll progress bar —— */
+  const progress = document.querySelector(".progress");
+  if (progress && !reduceMotion) {
+    const updateProgress = () => {
+      const doc = document.documentElement;
+      const max = doc.scrollHeight - window.innerHeight;
+      const ratio = max > 0 ? Math.min(1, Math.max(0, window.scrollY / max)) : 0;
+      progress.style.transform = `scaleX(${ratio})`;
+    };
+    updateProgress();
+    window.addEventListener("scroll", updateProgress, { passive: true });
+    window.addEventListener("resize", updateProgress, { passive: true });
   }
 
   /* —— Mobile nav —— */
@@ -86,7 +123,7 @@
         heroVisible = entry.isIntersecting;
         syncBar(heroVisible);
       },
-      { threshold: 0.15 }
+      { threshold: 0.12 }
     );
     heroIo.observe(hero);
     const onMq = () => syncBar(heroVisible);
@@ -100,7 +137,7 @@
   if (header) {
     const onScroll = () => {
       header.style.boxShadow =
-        window.scrollY > 8 ? "0 8px 28px rgba(0,0,0,0.25)" : "none";
+        window.scrollY > 8 ? "0 10px 32px rgba(0,0,0,0.28)" : "none";
     };
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });

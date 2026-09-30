@@ -6,17 +6,20 @@
   <title>Take The Class Today | NY Defensive Driving · VIP Safety Group</title>
   <meta name="description" content="NY DMV-approved defensive driving course. 10% insurance discount for 3 years · up to 4 points off. Online in about 6 hours. Questions? Call Danny at (516) 668-3494.">
   <meta name="robots" content="noindex, nofollow">
-  <meta name="theme-color" content="#0B1F3A">
+  <meta name="theme-color" content="#070F1C">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Noto+Serif:wght@500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+  <script>document.documentElement.classList.add("js");</script>
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
+  <div class="progress" aria-hidden="true"></div>
 
   <div class="proto-banner" role="note">
-    Prototype preview — not published. Forms are visual placeholders.
+    <span class="proto-dot" aria-hidden="true"></span>
+    Preview build · forms not wired yet · Carrd domain unchanged
   </div>
 
   <header class="site-header" id="top">
@@ -78,10 +81,10 @@
             <a class="btn btn-coral btn-lg" href="#start">Continue to NY class</a>
             <a class="btn btn-glass btn-lg" href="tel:+15166683494">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>
-              Text or call Danny
+              Call / text Danny
             </a>
           </div>
-          <p class="hero-trust">Calm, local help from VIP Safety Group — not a carnival of buttons.</p>
+          <p class="hero-trust">Calm, local help from VIP Safety Group — one NY course, no carnival of buttons.</p>
         </div>
         <aside class="hero-stat-card reveal reveal-delay" aria-label="Course snapshot">
           <div class="stat-row">
@@ -118,51 +121,61 @@
           <h2>We’ll send your NY class link.</h2>
           <p class="muted">Share a few details so we can help with enrollment and follow up about your discount. Then continue to the official TicketSchool registration.</p>
           <div class="sticky-cta-stack">
-            <a class="btn btn-outline-navy" href="tel:+15166683494">Prefer to talk? Call Danny</a>
+            <a class="btn btn-outline-navy" href="tel:+15166683494">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>
+              Prefer to talk? Call Danny
+            </a>
+            <a class="btn btn-text" href="sms:+15166683494">Or text (516) 668-3494</a>
             <p class="fine-inline">On site? Ask for Danny “The Dash Cam Installer.”</p>
           </div>
         </div>
         <div class="form-object reveal reveal-delay">
           <div class="form-object-head">
-            <h3>Continue to NY class</h3>
-            <p>Lead form — visual placeholder</p>
+            <div class="form-object-title">
+              <h3>Continue to NY class</h3>
+              <p>VIP Safety Group · enrollment help</p>
+            </div>
+            <span class="form-badge">Preview</span>
           </div>
           <form class="lead-form" action="#" method="post" onsubmit="return false;" aria-describedby="form-note">
             <label>
               <span>Full name</span>
-              <input type="text" name="name" autocomplete="name" placeholder="Alex Rivera" disabled>
+              <input type="text" name="name" autocomplete="name" placeholder="Alex Rivera" readonly tabindex="-1">
             </label>
-            <label>
-              <span>Phone</span>
-              <input type="tel" name="phone" autocomplete="tel" placeholder="(516) 555-0100" disabled>
-            </label>
-            <label>
-              <span>Email</span>
-              <input type="email" name="email" autocomplete="email" placeholder="you@email.com" disabled>
-            </label>
-            <fieldset disabled>
+            <div class="form-row">
+              <label>
+                <span>Phone</span>
+                <input type="tel" name="phone" autocomplete="tel" placeholder="(516) 555-0100" readonly tabindex="-1">
+              </label>
+              <label>
+                <span>Email</span>
+                <input type="email" name="email" autocomplete="email" placeholder="you@email.com" readonly tabindex="-1">
+              </label>
+            </div>
+            <fieldset>
               <legend>Reason</legend>
-              <div class="reason-chips">
-                <label class="chip"><input type="radio" name="reason" value="discount"> Insurance discount</label>
-                <label class="chip"><input type="radio" name="reason" value="points"> Point reduction</label>
-                <label class="chip"><input type="radio" name="reason" value="both" checked> Both</label>
+              <div class="reason-chips" role="presentation">
+                <span class="chip">Insurance discount</span>
+                <span class="chip">Point reduction</span>
+                <span class="chip is-selected">Both</span>
               </div>
             </fieldset>
             <label class="consent">
-              <input type="checkbox" name="consent" disabled checked>
+              <input type="checkbox" name="consent" checked disabled>
               <span>I agree to be contacted by VIP Safety Group / Choto Agency about my class and insurance options.</span>
             </label>
-            <button class="btn btn-coral btn-block" type="button" disabled>Continue to NY class</button>
+            <button class="btn btn-coral btn-block btn-lg" type="button" disabled>Continue to NY class</button>
             <p class="form-note" id="form-note">
-              <strong>Prototype note:</strong> this form is a visual placeholder only — not wired. Live capture (Carrd / Formspree / webhook) TBD with Milton. After submit, the TicketSchool CTA below would unlock.
+              Lead capture wires up at go-live (Carrd / Formspree / webhook). Until then, use the TicketSchool link below or call Danny.
             </p>
           </form>
           <div class="post-form-cta" aria-label="Class registration">
-            <p>Ready now? Start the official NY 6-hour online class:</p>
-            <a class="btn btn-navy btn-block"
+            <p class="post-form-label">Ready now? Start the official NY 6-hour online class</p>
+            <a class="btn btn-navy btn-block btn-lg"
                href="https://courses.ticketschool.com/nysdd/Registration/Step1?affiliate=423"
                target="_blank" rel="noopener noreferrer">
-              Start NY 6-hour online class (10% discount)
+              Start NY 6-hour online class
+              <span class="btn-sub">10% discount path · TicketSchool</span>
             </a>
             <p class="affiliate-note">TicketSchool · affiliate 423 · VIP Safety Group</p>
           </div>
@@ -170,13 +183,18 @@
       </div>
     </section>
 
-    <!-- CHAPTER 3: How it works (sticky scrub) -->
+    <!-- CHAPTER 3: How it works -->
     <section class="chapter chapter-night how-chapter" id="how" data-chapter="how">
       <div class="wrap how-layout">
         <div class="how-sticky reveal">
           <p class="kicker kicker-light">How it works</p>
           <h2>Three calm steps from enroll to discount.</h2>
           <p class="muted-on-dark">No carnival buttons. One NY course, finished on your schedule, certificate in hand for your insurer.</p>
+          <ol class="how-progress" aria-hidden="true">
+            <li data-marker="1" class="is-on"></li>
+            <li data-marker="2"></li>
+            <li data-marker="3"></li>
+          </ol>
         </div>
         <ol class="how-steps">
           <li class="how-step reveal" data-step="1">
@@ -243,7 +261,7 @@
           <div class="danny-actions">
             <a class="btn btn-coral btn-lg" href="tel:+15166683494">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>
-              (516) 668-3494
+              Call (516) 668-3494
             </a>
             <a class="btn btn-glass btn-lg" href="sms:+15166683494">Text Danny</a>
           </div>
@@ -281,14 +299,18 @@
         <a href="tel:+15166683494">(516) 668-3494</a>
         <a href="mailto:miltonchoto@outlook.com">Email</a>
         <a href="#start">Start class</a>
+        <a href="https://courses.ticketschool.com/nysdd/Registration/Step1?affiliate=423" target="_blank" rel="noopener noreferrer">TicketSchool</a>
       </div>
-      <p class="footer-note">On-box cinematic prototype · Sep 30, 2026 · not live on taketheclasstoday.com</p>
+      <p class="footer-note">Cinematic preview · Sep 30, 2026 · not live on taketheclasstoday.com</p>
     </div>
   </footer>
 
   <div class="sticky-bar" id="sticky-bar" hidden>
-    <a class="btn btn-coral btn-sm" href="#start">Continue to NY class</a>
-    <a class="btn btn-ghost btn-sm" href="tel:+15166683494">(516) 668-3494</a>
+    <a class="btn btn-coral" href="#start">Continue to NY class</a>
+    <a class="btn btn-ghost" href="tel:+15166683494">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>
+      Call Danny
+    </a>
   </div>
 
   <script src="app.js"></script>
